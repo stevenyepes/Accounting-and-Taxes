@@ -19,6 +19,12 @@ public class CuentasController {
         return repository.findAll();
     }
 
+    @GetMapping(path = "/{cuenta}")
+    public Cuenta find(@PathVariable("cuenta") String cuenta) {
+        return repository.findByNumeroCuenta(cuenta);
+    }
+
+
     @PostMapping(consumes = "application/json")
     public Cuenta create(@RequestBody Cuenta cuenta) {
         return repository.save(cuenta);

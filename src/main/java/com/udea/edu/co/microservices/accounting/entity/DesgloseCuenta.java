@@ -1,6 +1,7 @@
 package com.udea.edu.co.microservices.accounting.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -15,16 +16,17 @@ public class DesgloseCuenta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @ApiModelProperty(hidden = true)
     private long id;
 
-    @JsonProperty("tipo")
-    private String tipo;
+    @JsonProperty("categoria")
+    private String categoria;
 
     @JsonProperty("codigo_inventario")
     private String codigoInvenario;
 
-    @JsonProperty("valor")
-    private BigDecimal valor;
+    @JsonProperty("costo")
+    private BigDecimal costo;
 
     @JsonProperty("cantidad")
     private Integer cantidad;
