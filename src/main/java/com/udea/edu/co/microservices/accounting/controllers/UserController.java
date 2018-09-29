@@ -1,4 +1,4 @@
-package com.udea.edu.co.microservices.accounting.controller;
+package com.udea.edu.co.microservices.accounting.controllers;
 
 import com.udea.edu.co.microservices.accounting.entity.User;
 import com.udea.edu.co.microservices.accounting.repository.UserRepository;
