@@ -12,23 +12,23 @@ import java.math.BigDecimal;
 
 @Data
 @Entity
-public class DesgloseCuenta {
+public class AccountBreakdown {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @ApiModelProperty(hidden = true)
     private long id;
 
-    @JsonProperty("categoria")
-    private String categoria;
+    @JsonProperty("category")
+    private String category;
 
-    @JsonProperty("codigo_inventario")
-    private String codigoInvenario;
+    @JsonProperty("inventory_code")
+    private String inventoryCode;
 
-    @JsonProperty("costo")
-    private BigDecimal costo;
+    @JsonProperty("cost")
+    private BigDecimal cost;
 
-    @JsonProperty("cantidad")
-    private Integer cantidad;
+    @JsonProperty("quantity")
+    private Integer quantity;
 
 }

@@ -9,23 +9,23 @@ import java.util.List;
 
 @Entity
 @Data
-public class Cuenta {
+public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @ApiModelProperty(hidden = true)
     private long id;
 
-    @JsonProperty("numero_cuenta")
+    @JsonProperty("account_number")
     @ApiModelProperty(hidden = true)
-    private String numeroCuenta;
+    private String accountNumber;
 
-    @JsonProperty("clase")
-    private String clase;
-    @JsonProperty("detalle")
+    @JsonProperty("account_class")
+    private String accountClass;
+    @JsonProperty("detail")
     @OneToMany(
             fetch = FetchType.EAGER,
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
-    private List<DesgloseCuenta> desgloseCuentas;
+    private List<AccountBreakdown> accountBreakdowns;
 }

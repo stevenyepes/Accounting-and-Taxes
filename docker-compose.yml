@@ -18,3 +18,17 @@ services:
     restart: always
     ports:
       - 3000:8080
+
+  account:
+    build: ./
+    ports:
+      - 4000:8080
+    depends_on: # El contenedor no iniciará hasta que db nos responda que ya se encuentra disponible
+      - db
+    links:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db/accountingdb?createIfNotExists=true
+      SPRING_DATASOURCE_USERNAME: udea
+      SPRING_DATASOURCE_PASSWORD: secret-password
+
