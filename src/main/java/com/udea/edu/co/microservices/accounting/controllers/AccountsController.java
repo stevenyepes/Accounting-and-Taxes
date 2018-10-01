@@ -1,4 +1,4 @@
-package com.udea.edu.co.microservices.accounting.controllers;	compile('org.springframework.boot:spring-boot-starter-jersey')
+package com.udea.edu.co.microservices.accounting.controllers;
 
 
 
